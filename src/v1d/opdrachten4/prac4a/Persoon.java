@@ -11,6 +11,6 @@ public class Persoon {
 
     @Override
     public String toString() {
-        return persoonNaam  + "; leeftijd " + persoonLeeftijd;
+        return persoonNaam  + "; leeftijd " + persoonLeeftijd + " jaar";
     }
 }

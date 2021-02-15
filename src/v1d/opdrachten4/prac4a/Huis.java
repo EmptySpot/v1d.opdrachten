@@ -23,11 +23,6 @@ public class Huis {
 
     @Override
     public String toString() {
-        return "Huis{" +
-                "adres='" + adres + '\'' +
-                ", bouwJaar=" + bouwJaar +
-                ", persoon=" + persoon +
-                ", persoonLeeftijd=" + persoonLeeftijd +
-                '}';
+        return "Huis " + adres + " is gebouwd in " + bouwJaar + "\nen heeft huisbaas " + persoon;
     }
 }
