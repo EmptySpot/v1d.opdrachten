@@ -35,14 +35,23 @@ public class AutoHuur {
 
     @Override
     public String toString() {
-        double totaalPrijs = 0;
-        if(gA != null && k != null){
-            double korting = 100 - k.getKorting();
-            System.out.println(korting);
-            totaalPrijs =  gA.getPrijsPerDag() * aantalDagen / korting;
+
+        double totaalPrijs = 0.0;
+        String autoType = "er is geen auto bekend";
+        String klantInfo = "er is geen huurder bekend";
+
+        if (gA != null){
+            totaalPrijs = gA.getPrijsPerDag() * aantalDagen;
+            autoType = gA.toString();
         }
-        return " autotype: " + gA + "\n"
-                + " op de naam van: " + k + "\n"
-                + " aantal dagen: " + aantalDagen + " en dat kost " + totaalPrijs; //* gA.getPrijsPerDag();
+
+        if (k != null){
+            totaalPrijs *= (100 - k.getKorting())/100;
+            klantInfo = k.toString();
+        }
+
+        return " autotype: " + autoType + "\n"
+                + " op de naam van: " + klantInfo + "\n"
+                + " aantal dagen: " + aantalDagen + " en dat kost " + totaalPrijs;
     }
 }
