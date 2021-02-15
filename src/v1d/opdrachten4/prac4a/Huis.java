@@ -1,6 +1,6 @@
 package v1d.opdrachten4.prac4a;
 
-import v1d.test.collegeopdrachtenles4.collegeopdrachten4.Eigenaar;
+
 
 public class Huis {
     private String adres;
