@@ -1,0 +1,19 @@
+Logische testgevallen:
+
+geen huurder, geen auto +
+geen huurder, wel auto +
+wel huurder, geen auto +
+geen aantaldagen, wel returnen +
+hoge aantaldagen set +
+negatief aantal dagen set +
+0 aantal dagen set
+wel huurder, wel auto, geen bedrag +
+wel huurder, wel auto, negatief bedrag +
+negatief korting, positief bedrag +
+negatief korting, negatief bedrag +
+Te veel achter de komma voor geld, niet veel dagen +
+Te veel achter de komma voor geld, veel dagen +
+Te veel achter de komma voor korting, niet veel dagen +
+Te veel achter de komma voor korting, veel dagen +
+Precies 100% korting +
+Ruim meer dan 100% korting +

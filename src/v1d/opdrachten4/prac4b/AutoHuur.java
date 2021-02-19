@@ -14,6 +14,9 @@ public class AutoHuur {
     }
 
     public void setAantalDagen(int aantalDagen) {
+        if(aantalDagen < 0){
+            aantalDagen *= -1;
+        }
         this.aantalDagen = aantalDagen;
     }
 
@@ -33,6 +36,16 @@ public class AutoHuur {
         this.k = k;
     }
 
+    public double totaalPrijs(){
+        double totaalPrijs = gA.getPrijsPerDag() * aantalDagen;
+        if (k!= null){
+            totaalPrijs *= (100 - k.getKorting())/100;
+            totaalPrijs = (double)Math.round(totaalPrijs*100);
+            totaalPrijs = totaalPrijs / 100;
+        }
+        return totaalPrijs;
+    }
+
     @Override
     public String toString() {
 
@@ -41,12 +54,11 @@ public class AutoHuur {
         String klantInfo = "er is geen huurder bekend";
 
         if (gA != null){
-            totaalPrijs = gA.getPrijsPerDag() * aantalDagen;
+            totaalPrijs = totaalPrijs();
             autoType = gA.toString();
         }
 
         if (k != null){
-            totaalPrijs *= (100 - k.getKorting())/100;
             klantInfo = k.toString();
         }
 

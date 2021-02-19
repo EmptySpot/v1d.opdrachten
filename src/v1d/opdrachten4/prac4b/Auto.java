@@ -5,6 +5,9 @@ public class Auto {
     private double prijsPerDag;
 
     public Auto(String type, double prijsPerDag) {
+        if(prijsPerDag < 0){
+            prijsPerDag *= -1;
+        }
         this.type = type;
         this.prijsPerDag = prijsPerDag;
     }

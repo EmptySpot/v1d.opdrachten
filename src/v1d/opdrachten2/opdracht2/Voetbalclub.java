@@ -35,7 +35,5 @@ public class Voetbalclub {
                 + aantalGelijk + " "
                 + aantalVerloren + " "
                 + aantalPunten();
-
-
     }
 }
