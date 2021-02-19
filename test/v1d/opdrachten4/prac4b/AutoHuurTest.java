@@ -190,8 +190,8 @@ class AutoHuurTest {
         ahT.setGehuurdeAuto(a1);
         ahT.setAantalDagen(4);
         assertEquals(" autotype: Peugeot 207 met de prijs per dag: 50.0\n" +
-                " op de naam van: Mijnheer de Vries (korting: 5.0%)\n" +
-                " aantal dagen: 4 en dat kost 56192.14", ahT.toString());
+                " op de naam van: Mijnheer de Vries (korting: 0.0%)\n" +
+                " aantal dagen: 4 en dat kost 200.0", ahT.toString());
     }
 
     @Test
@@ -206,6 +206,6 @@ class AutoHuurTest {
         ahT.setAantalDagen(4);
         assertEquals(" autotype: Peugeot 207 met de prijs per dag: 50.0\n" +
                 " op de naam van: Mijnheer de Vries (korting: 50.0%)\n" +
-                " aantal dagen: 4 en dat kost 56192.14", ahT.toString());
+                " aantal dagen: 4 en dat kost 100.0", ahT.toString());
     }
 }

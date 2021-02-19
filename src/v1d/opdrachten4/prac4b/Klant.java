@@ -13,6 +13,9 @@ public class Klant {
     }
 
     public void setKorting(double kortingsPercentage) {
+        while (kortingsPercentage >= 100){
+            kortingsPercentage -= 100;
+        }
         this.kortingsPercentage = kortingsPercentage;
     }
 
