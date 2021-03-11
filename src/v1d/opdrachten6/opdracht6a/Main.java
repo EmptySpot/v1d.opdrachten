@@ -31,5 +31,6 @@ public class Main {
         System.out.println("p1 heeft de volgende games nog niet: " + nogNietInBezit.toString());
         Game game1 = p1.zoekGameOpNaam("Just Cause 3");
         System.out.println("p1 heeft Just Cause 3 " + (game1 != null ? "wel!" : "niet!"));
+
     }
 }
