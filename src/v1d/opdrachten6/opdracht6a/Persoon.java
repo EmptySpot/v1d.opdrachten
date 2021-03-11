@@ -73,4 +73,13 @@ public class Persoon {
         }
         return nietInBezit;
     }
+
+    public Game zoekGameOpNaam(String game) {
+        for(Game g : mijnGames){
+            if(game.equals(g.getNaam())) {
+                return g;
+            }
+        }
+        return null;
+    }
 }
