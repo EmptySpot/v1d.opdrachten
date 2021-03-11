@@ -63,4 +63,14 @@ public class Persoon {
         }
         return persoonReturn.toString();
     }
+
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+        ArrayList<Game> nietInBezit = new ArrayList<Game>();
+        for(Game g : teKoop) {
+            if(!mijnGames.contains(g)){
+                nietInBezit.add(g);
+            }
+        }
+        return nietInBezit;
+    }
 }
